@@ -163,7 +163,7 @@ def create_interface():
                 gr.Number(label="Confidence"),
                 gr.Image(label="Visualization")
             ],
-            title="🏷️ SKU Digit Reader",
+            title="SKU Digit Reader",
             description="""
             Upload an image containing digits (like warehouse labels, receipts, or SKU codes) 
             to get OCR recognition results. The model can handle various fonts, sizes, and orientations.

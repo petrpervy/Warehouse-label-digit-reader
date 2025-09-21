@@ -1,4 +1,4 @@
-# 🏷️ Warehouse Label Digit Reader
+# Warehouse Label Digit Reader
 
 *CRNN-CTC OCR system for automated SKU recognition in warehouse environments*
 
@@ -7,20 +7,20 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.68+-green.svg)](https://fastapi.tiangolo.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🎯 Problem Statement
+## Problem Statement
 
 Warehouse operations require efficient SKU (Stock Keeping Unit) tracking, but manual reading of numeric labels from shelves, receipts, and packaging is time-consuming and error-prone. This project automates the process using computer vision to read multi-digit SKUs from various warehouse label formats.
 
-## ✨ Features
+## Features
 
-- **🧠 CRNN-CTC Architecture**: CNN feature extraction + Bidirectional LSTM + Connectionist Temporal Classification
-- **🎨 Synthetic Data Generation**: Creates realistic training data with perspective, noise, and blur transformations
-- **🚀 FastAPI REST API**: Production-ready inference server with batch processing
-- **🎮 Interactive Gradio Demo**: Web-based UI for real-time predictions
-- **📊 Comprehensive Evaluation**: Robustness testing against noise, blur, and lighting conditions
-- **⚡ High Performance**: <50ms inference time on CPU, 85-97% accuracy
+- **CRNN-CTC Architecture**: CNN feature extraction + Bidirectional LSTM + Connectionist Temporal Classification
+- **Synthetic Data Generation**: Creates realistic training data with perspective, noise, and blur transformations
+- **FastAPI REST API**: Production-ready inference server with batch processing
+- **Interactive Gradio Demo**: Web-based UI for real-time predictions
+- **Comprehensive Evaluation**: Robustness testing against noise, blur, and lighting conditions
+- **High Performance**: <50ms inference time on CPU, 85-97% accuracy
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Clone and install
@@ -41,7 +41,7 @@ uvicorn app.main:app --reload
 python demo/ui.py
 ```
 
-## 📊 Results
+## Results
 
 | Model | Exact Match | Edit Distance ↓ | Speed | Notes |
 |-------|-------------|----------------|-------|-------|
@@ -51,19 +51,19 @@ python demo/ui.py
 
 *Results on 10K test images with 3-8 digit sequences*
 
-## 🏗️ Repository Structure
+## Repository Structure
 
 ```
 warehouse-label-digit-reader/
-├── 📋 README.md                    # This file
-├── 📄 LICENSE                      # MIT License
-├── ⚙️ requirements.txt             # Python dependencies
-├── 🔧 configs/
+├── README.md                       # This file
+├── LICENSE                         # MIT License
+├── requirements.txt                # Python dependencies
+├── configs/
 │   └── crnn.yaml                  # Model configuration
-├── 📊 data/
+├── data/
 │   ├── README.md                  # Data documentation
 │   └── synth/                     # Generated training data
-├── 🧠 src/                        # Core ML implementation
+├── src/                           # Core ML implementation
 │   ├── __init__.py
 │   ├── synth_digits.py           # Synthetic data generator
 │   ├── dataset.py                # PyTorch dataset
@@ -73,19 +73,19 @@ warehouse-label-digit-reader/
 │   ├── decode.py                 # CTC decoding
 │   ├── utils.py                  # Utility functions
 │   └── infer.py                  # Command-line inference
-├── 🌐 app/
+├── app/
 │   └── main.py                   # FastAPI server
-├── 🎮 demo/
+├── demo/
 │   ├── ui.py                     # Gradio interface
 │   ├── app.ipynb                 # Jupyter demo
 │   └── preview/                  # Preview images
-├── 📈 artifacts/
+├── artifacts/
 │   ├── checkpoints/              # Model weights
 │   └── reports/                  # Training plots & metrics
-└── 🧪 test_installation.py       # Installation test
+└── test_installation.py          # Installation test
 ```
 
-## 🎬 Demo
+## Demo
 
 ### Interactive Web Interface
 Launch the Gradio demo to test the model interactively:
@@ -112,7 +112,7 @@ curl -X POST -F "files=@img1.png" -F "files=@img2.png" http://localhost:8000/pre
 
 *Sample predictions on warehouse label images*
 
-## 🔧 Configuration
+## Configuration
 
 Customize the model by editing `configs/crnn.yaml`:
 
@@ -130,7 +130,7 @@ train:
   lr: 0.001            # Learning rate
 ```
 
-## 📈 Performance Analysis
+## Performance Analysis
 
 ### Training Curves
 - **Loss**: Smooth convergence with early stopping
@@ -142,7 +142,7 @@ train:
 - **GPU**: <10ms per image (NVIDIA RTX 3080)
 - **Batch**: 100+ images/second throughput
 
-## 🛠️ Development
+## Development
 
 ### Adding New Features
 1. **Custom augmentations**: Modify `src/synth_digits.py`
@@ -159,7 +159,7 @@ python test_installation.py
 python -m src.infer --image path/to/test/image.png
 ```
 
-## 📚 Technical Details
+## Technical Details
 
 ### Model Architecture
 - **CNN**: 4-layer feature extractor with BatchNorm and MaxPool
@@ -173,7 +173,7 @@ python -m src.infer --image path/to/test/image.png
 - **Noise**: Gaussian noise and motion blur
 - **Lighting**: Brightness and contrast variations
 
-## 🚀 Deployment
+## Deployment
 
 ### Docker
 ```dockerfile
@@ -191,17 +191,17 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0"]
 - **Google Cloud**: Cloud Run or Compute Engine
 - **Azure**: Container Instances or App Service
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Gleb Romanov** - Portfolio Project
 - GitHub: [@yourusername](https://github.com/yourusername)
 - LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -209,7 +209,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📚 References
+## References
 
 - [Connectionist Temporal Classification](https://www.cs.toronto.edu/~graves/icml_2006.pdf)
 - [An End-to-End Trainable Neural OCR](https://arxiv.org/abs/1507.05717)
@@ -217,4 +217,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*This project demonstrates expertise in computer vision, deep learning, and full-stack ML deployment - perfect for showcasing technical skills to potential employers!* 🚀
+*This project demonstrates expertise in computer vision, deep learning, and full-stack ML deployment - perfect for showcasing technical skills to potential employers.*
