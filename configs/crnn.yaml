@@ -1,0 +1,27 @@
+seed: 42
+charset: "0123456789"
+img_h: 32
+max_len: 12
+
+paths:
+  synth_dir: data/synth
+  ckpt_dir: artifacts/checkpoints
+  report_dir: artifacts/reports
+
+train:
+  batch_size: 64
+  epochs: 20
+  lr: 0.001
+  num_workers: 4
+  val_split: 0.1
+
+augment:
+  affine: true
+  perspective: true
+  blur: true
+  brightness_contrast: true
+
+model:
+  cnn_out: 256
+  rnn_hidden: 256
+  rnn_layers: 2
