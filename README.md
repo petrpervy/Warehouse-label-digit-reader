@@ -186,35 +186,5 @@ EXPOSE 8000
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0"]
 ```
 
-### Cloud Platforms
-- **AWS**: EC2 with GPU instances
-- **Google Cloud**: Cloud Run or Compute Engine
-- **Azure**: Container Instances or App Service
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Author
-
-**Gleb Romanov** - Portfolio Project
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## References
-
-- [Connectionist Temporal Classification](https://www.cs.toronto.edu/~graves/icml_2006.pdf)
-- [An End-to-End Trainable Neural OCR](https://arxiv.org/abs/1507.05717)
-- [CRNN for Scene Text Recognition](https://arxiv.org/abs/1507.05717)
-
----
 
 *This project demonstrates expertise in computer vision, deep learning, and full-stack ML deployment - perfect for showcasing technical skills to potential employers.*
